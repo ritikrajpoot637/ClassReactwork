@@ -1,4 +1,5 @@
 import React, { use, useState } from 'react'
+import { useEffect } from 'react';
 import { Link, useSearchParams ,useParams} from 'react-router-dom';
 const fetched=fetch("https://dummyjson.com/products").then(res=>res.json());
 
