@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom' 
+import { BrowserRouter, Routes, Route, Link, Form } from 'react-router-dom' 
 import About from './AboutNested.jsx/About'
 import Home from './Pages/Home'
 
@@ -8,6 +8,8 @@ import { AboutComp } from './AboutNested.jsx/AboutComp'
 import AboutTeam from './AboutNested.jsx/AboutTeam'
 import BlogComp from './BlogDynmic/BlogComp'
 import ErrorOfBlog from './BlogDynmic/ErrorOfBlog'
+import ProductDetail from './Product/ProductDetail'
+
 
 const App = () => {
   const Blog=React.lazy(()=>import("./BlogDynmic/Blog"));
@@ -16,7 +18,7 @@ const App = () => {
     <BrowserRouter>
      
    <nav className="nav">
-        <Link className="nav-link" to="/">Home</Link>
+        <Link className="nav-link" to="/">Product</Link>
         <Link className="nav-link" to="/about">About</Link>
         <Link className="nav-link" to="/blog">Blog</Link>
       </nav>  
@@ -24,6 +26,7 @@ const App = () => {
 
       <Routes>
         <Route path='/' element={<Home/>}/>
+        <Route path='/product/:id' element={<ProductDetail/>}/>
         <Route path='/about' element={<About/>}>
            <Route path='AboutComp' element={<AboutComp/>} />
            <Route path='AboutTeam' element={<AboutTeam/>}/>
@@ -33,7 +36,7 @@ const App = () => {
          <Route path='/blog/:id' element={<BlogComp/>}/>
      
 
-
+4
         
         <Route path='*' element={<Contact/>}/>
       </Routes>
