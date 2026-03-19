@@ -19,7 +19,12 @@ console.log(`allProduct:${rproducts.length}`);
  const lastIndex=curpage*perpageItem;
  const firstIndex=lastIndex-perpageItem;
  const res=rproducts.slice(firstIndex,lastIndex);
-
+useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' 
+    });
+  }, [curpage]);
   return (
     <>
     <div className='text-center'>Product with only UseSerachParms</div>
