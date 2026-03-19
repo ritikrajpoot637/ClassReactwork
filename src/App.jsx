@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom' 
 import About from './AboutNested.jsx/About'
 import Home from './Pages/Home'
-import Blog from './BlogDynmic/Blog'
+
 import { Contact } from './Pages/Contact'
 import { AboutComp } from './AboutNested.jsx/AboutComp'
 import AboutTeam from './AboutNested.jsx/AboutTeam'
@@ -10,6 +10,7 @@ import BlogComp from './BlogDynmic/BlogComp'
 import ErrorOfBlog from './BlogDynmic/ErrorOfBlog'
 
 const App = () => {
+  const Blog=React.lazy(()=>import("./BlogDynmic/Blog"));
   return (
   
     <BrowserRouter>
