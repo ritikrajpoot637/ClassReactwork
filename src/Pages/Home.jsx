@@ -23,7 +23,7 @@ const Home = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [curpage]);
 
-  // Dynamic Bootstrap Classes based on Theme
+
   const bgClass = theme === 'dark' ? 'bg-dark text-white' : 'bg-light text-dark';
   const cardClass = theme === 'dark' ? 'bg-secondary text-white border-0' : 'bg-white border-0 shadow-sm';
 
@@ -75,7 +75,7 @@ const Home = () => {
           ))}
         </div>
 
-        {/* Improved Pagination */}
+       
         <nav className="mt-5">
           <ul className="pagination justify-content-center">
             <li className={`page-item ${curpage === 1 ? "disabled" : ''}`}>
