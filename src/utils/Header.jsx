@@ -10,7 +10,7 @@ const Header = () => {
     <nav className={`navbar navbar-expand-lg sticky-top shadow-sm ${theme === 'dark' ? 'navbar-dark bg-dark' : 'navbar-light bg-white'}`}>
       <div className="container">
         <Link className="navbar-brand fw-bold text-primary" to="/product">
-          <i className="bi bi-shop me-2"></i>STORE.IO
+          <i className="bi bi-shop me-2"></i>RK STORE.IO
         </Link>
         
         <button className="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
