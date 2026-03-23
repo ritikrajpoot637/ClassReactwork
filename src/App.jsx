@@ -63,7 +63,7 @@ const App = () => {
               <Route path='/blog/:id' element={<BlogComp />} />
             </Route>
 
-            <Route path='*' element={<Contact />} />
+            <Route path='*' element={<ErrorOfBlog/>} />
           </Routes>
         </Suspense>
       </ThemeContext>

@@ -5,7 +5,7 @@ const ErrorOfBlog = () => {
 
   const navigate=useNavigate();
   return (
-    <div>ErrorOfBlog
+    <div>Error
         <button onClick={()=>{navigate('/')}} className='btn btn-primary'>go back</button>
     </div>
     
